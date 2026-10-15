@@ -1,0 +1,145 @@
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        background: var(--footer-bg);
+    }
+
+    :root {
+        --primary: #C8F31D;
+        --primary-50: #F9FEE7;
+        --primary-100: #F3FCCF;
+        --primary-200: #E8FA9E;
+        --primary-300: #DCF76E;
+        --primary-400: #D0F53D;
+        --primary-600: #9DC20A;
+        --primary-700: #769108;
+        --primary-800: #4F6105;
+        --primary-900: #273003;
+        --primary-950: #141801;
+
+        /* Fonts */
+        --font-primary: "Outfit", sans-serif;
+        --font-secondary: "Plus Jakarta Sans", sans-serif;
+
+        /* Dark Theme Base */
+        --header-bg: #0D0D0D;
+        --body-bg: #3D3D3D;
+        --footer-bg: #020202;
+        --bg-dark: #1c1c1c;
+        --text-light: #ffffff;
+        --text-muted: #9ca3af;
+    }
+
+
+
+    .circle-btn {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #444;
+        background: black;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .circle-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(200, 243, 29, 0.45);
+    }
+
+    .circle-btn .fill {
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: var(--primary);
+        bottom: -50%;
+        left: -100%;
+        transition: 0.5s ease-in-out;
+        border-radius: 50%;
+    }
+
+    .circle-btn:hover .fill {
+        bottom: -10%;
+        left: -10%;
+    }
+
+    .circle-btn .text {
+        position: relative;
+        z-index: 2;
+        color: white;
+        letter-spacing: 2px;
+        font-family: var(--font-primary);
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .circle-btn:hover .text {
+        color: black;
+    }
+
+    /*  <button class="circle-btn">
+            <span class="fill"></span>
+            <span class="text">CONTACT</span>
+        </button> */
+
+
+    .first-bg {
+        width: 100%;
+        height: 100vh;
+        background-image: url(./assets/home-images/hero-bg-one.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .second-bg {
+        width: 100%;
+        height: 100vh;
+        background-image: url(./assets/home-images/hero-bg-two.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top right;
+
+    }
+
+
+
+
+
+
+
+    @media (max-width: 992px) {
+        .circle-btn {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .circle-btn {
+            width: 80px;
+            height: 80px;
+        }
+
+        .circle-btn .text {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
