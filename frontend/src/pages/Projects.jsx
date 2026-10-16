@@ -47,7 +47,7 @@ const Projects = () => {
           aria-labelledby="about-hero-title"
         >
           <div className="container relative mx-auto px-5 pb-10 pt-10 md:px-10 md:pb-14 lg:px-20">
-            <RotatingBadge className="absolute right-5 top-4 md:right-10 md:top-0 lg:right-0" />
+            <RotatingBadge className="absolute right-5  md:right-10 md:top-0 lg:right-0" />
 
             <div className="flex flex-col gap-5">
               {/* Section label */}
